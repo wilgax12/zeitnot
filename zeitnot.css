@@ -1,0 +1,389 @@
+/* Genel sayfa ayarları */
+body {
+    background: url('https://media.tenor.com/GPp6_8yAH5oAAAAe/panky-kramp.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b83131;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    background-color: #121212; /* Koyu arka plan */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Sayfa içeriğini sığdırmak için container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Başlıklar */
+h1 {
+    color: #ffffff;
+    font-size: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #840101, #5e2503);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Alt başlık */
+.sub-title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #f0f0f0;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Sayfa içeriği */
+.content {
+    padding: 20px;
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+/* Sayfa altındaki footer */
+footer {
+    text-align: center;
+    font-size: 1em;
+    color: #777;
+    padding: 25px 0;
+    background-color: #222;
+    color: white;
+    border-top: 2px solid #b83131;
+    position: relative;
+    width: 100%;
+}
+
+/* Ana içerik bölümü */
+h2, h3 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Alt başlıklar ve açıklamalar */
+h4, p {
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Yazı blokları */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: "• ";
+    color: #b83131;
+}
+
+/* Resimlerin container'ı */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Görsellerin stilizasyonu */
+.zeitnot-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zeitnot-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Yatay çizgiler */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Yorumlar kısmı */
+.comments-section {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.comment-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.comment-form label {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.comment-form input, .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #b83131;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.comment-form button {
+    background-color: #b83131;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #a71a1a;
+}
+
+
+.comment {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.comment p {
+    color: #ddd;
+}
+
+.comment strong {
+    color: #b83131;
+}
+
+/* Video container */
+/* Video Konteyneri */
+.video-container {
+    display: flex;               /* Flexbox ile hizalama */
+    justify-content: center;     /* Yatayda ortalama */
+    align-items: center;         /* Dikeyde ortalama */
+    margin: 100px 0;              /* Üst ve alt boşluk */
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 100px;          /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+/* YouTube Videosu */
+.youtube-video {
+    width: 100%;                  /* Genişliği %100 yaparak konteyneri doldurur */
+    max-width: 900px;             /* Maksimum genişlik 900px (büyük ekranlarda çok büyük olmaması için) */
+    height: 600px;                /* Sabit yükseklik */
+    border-radius: 10px;          /* Yuvarlatılmış köşeler */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    transition: transform 0.3s ease-in-out; /* Hover efekti için geçiş */
+}
+
+/* Hover Efekti (Videoya tıklanınca animasyon) */
+.youtube-video:hover {
+    transform: scale(1.05); /* Videoya hover yapıldığında büyüme efekti */
+}
+
+/* Responsive (Mobil Uyumlu) */
+@media (max-width: 768px) {
+    .youtube-video {
+        height: 300px;  /* Mobilde videonun yüksekliğini küçült */
+    }
+}
+
+@media (max-width: 480px) {
+    .youtube-video {
+        height: 250px;  /* Daha küçük ekranlarda video boyutunu küçült */
+    }
+}
+
+
+/* Yorumları içeren container */
+.news-articles {
+    margin-top: 30px;
+}
+
+article {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+article h4 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: #f0f0f0;
+    font-size: 1.1em;
+}
+
+/* Buton stili */
+button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #b83131;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Buton ve input stil */
+button, textarea {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #a71a1a;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Scroll bar için özel stil */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2, h3 {
+        font-size: 2em;
+    }
+
+    .zeitnot-image {
+        max-width: 100%;
+    }
+
+    .comment, .news-articles article {
+        padding: 10px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2, h3 {
+        font-size: 1.8em;
+    }
+
+    p, ul {
+        font-size: 1em;
+    }
+
+    .zeitnot-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    footer {
+        background-color: #333; /* Koyu arka plan */
+        color: #fff; /* Beyaz yazı */
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    footer img {
+        max-width: 50%;
+        width: 150px; /* Görselin genişliğini 150px olarak ayarla */
+        height: auto; /* Yükseklik orantılı olarak ayarlanır */
+        margin-bottom: 10px; /* Görsel ile metin arasına boşluk ekle */
+    }
+    /* Yüksekliği sınırlama */
+
+}
